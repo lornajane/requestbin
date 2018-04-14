@@ -19,19 +19,33 @@ Create a Heroku account if you haven't, then grab the RequestBin source using gi
 
 From the project directory, create a Heroku application:
 
-`$ heroku create`
+```
+$ cd requestbin
+$ heroku create
+```
 
-Add Heroku's redis addon:
+This step will have several lines of output.  You care about these two:  
+```
+Creating app... done, ⬢ clueless-leader-37188
+https://clueless-leader-37188.herokuapp.com/ | https://git.heroku.com/clueless-leader-37188.git
+```
+You need to pluck the application name in this example
+*clueless-leader-37188*.  You will need the actual app name in several cases below.
 
-`$ heroku addons:add heroku-redis`
+
+Save the .git link above for a step below.
+
+Add Heroku's redis addon.  Note: you will have to have a credit card on file with Heroku:
+
+`$ heroku addons:add heroku-redis -a clueless-leader-37188`
 
 Set an environment variable to indicate production:
 
-`$ heroku config:set REALM=prod`
+`$ heroku config:set REALM=prod -a clueless-leader-37188`
 
 Now just deploy via git:
 
-`$ git push heroku master`
+`$ git push https://git.heroku.com/clueless-leader-37188.git master`
 
 It will push to Heroku and give you a URL that your own private RequestBin will be running.
 
