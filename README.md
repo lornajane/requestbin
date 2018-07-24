@@ -52,6 +52,7 @@ $ sudo docker-compose up -d
 
 Your own private RequestBin will be running on this server.
 
+`http://localhost:8000`
 
 Contributors
 ------------
