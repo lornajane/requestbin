@@ -1,9 +1,10 @@
-# We have discontinued the publicly hosted version of RequestBin due to ongoing abuse that made it very difficult to keep the site up reliably. Please see instructions below for setting up your own self-hosted instance.
+# Forked from runscope/requestbin with respect and thanks
 
-Originally Created by [Jeff Lindsay](http://progrium.com)
+* Originally Created by [Jeff Lindsay](http://progrium.com)
 
-Upgraded to python3 by Scott Rogers <scottrogers@newrelic.com>
+* Upgraded to python3 by Scott Rogers <scottrogers@newrelic.com>
 
+Requestbin is a hosted tool (deploy your own to Heroku, or use Docker - it uses Python and Redis) to receive and allow you to inspect HTTP requests. It is brilliant for testing API calls, catching webhooks you haven't set up better handling for yet, and other HTTP diagnostics.
 
 License
 -------
@@ -18,7 +19,7 @@ Looking to self-host?
 ## Deploy your own instance using Heroku
 Create a Heroku account if you haven't, then grab the RequestBin source using git:
 
-`$ git clone git://github.com/Runscope/requestbin.git`
+`$ git clone git://github.com/lornajane/requestbin.git`
 
 From the project directory, create a Heroku application:
 
@@ -58,7 +59,7 @@ It will push to Heroku and give you a URL that your own private RequestBin will 
 On the server/machine you want to host this, you'll first need a machine with
 docker and docker-compose installed, then grab the RequestBin source using git:
 
-`$ git clone git://github.com/Runscope/requestbin.git`
+`$ git clone git://github.com/lornajane/requestbin.git`
 
 Go into the project directory and then build and start the containers
 
